@@ -11,7 +11,7 @@ class CipherTests(unittest.TestCase):
         result = cipher.encode('K')
         self.assertEqual('M', result)
 
-    def xtest_O_maps_to_Q(self):
+    def test_O_maps_to_Q(self):
         cipher = getCipher()
         result = cipher.encode('O')
         self.assertEqual('Q', result)
