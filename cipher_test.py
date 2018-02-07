@@ -41,8 +41,18 @@ class CipherTests(unittest.TestCase):
         result = cipher.encode('e')
         self.assertEqual('G', result)
 
-    def xtest_nonascii_is_unchanged(self):
+    def test_Y_maps_to_B_when_cipher_is_3(self):
+	cipher = Cipher(3)
+        result = cipher.encode('Y')
+        self.assertEqual('B', result)
+
+    def test_nonascii_is_unchanged(self):
         cipher = getCipher()
         result = cipher.encode('(')
         self.assertEqual('(', result)
+
+    def test_challenge_text_block(self):
+        cipher = getCipher()
+        result = cipher.encode('map')
+        self.assertEqual('OCR', result)
 
