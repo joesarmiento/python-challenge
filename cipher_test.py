@@ -16,17 +16,27 @@ class CipherTests(unittest.TestCase):
         result = cipher.encode('O')
         self.assertEqual('Q', result)
 
-    def xtest_E_maps_to_G(self):
+    def test_E_maps_to_G(self):
         cipher = getCipher()
         result = cipher.encode('E')
         self.assertEqual('G', result)
 
-    def xtest_OE_maps_to_QG(self):
+    def test_Z_maps_to_B(self):
+        cipher = getCipher()
+        result = cipher.encode('Z')
+        self.assertEqual('B', result)
+
+    def test_Y_maps_to_A(self):
+        cipher = getCipher()
+        result = cipher.encode('Y')
+        self.assertEqual('A', result)
+
+    def test_OE_maps_to_QG(self):
         cipher = getCipher()
         result = cipher.encode('OE')
         self.assertEqual('QG', result)
 
-    def xtest_e_maps_to_G(self):
+    def test_e_maps_to_G(self):
         cipher = getCipher()
         result = cipher.encode('e')
         self.assertEqual('G', result)
