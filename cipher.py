@@ -11,9 +11,5 @@ class Cipher(object):
 				return c 
 
 	def encode(self, s):
-		result = ''
-		for c in s.upper():
-			shiftedCharacter = self.encodeCharacter(c)
-			result = result + shiftedCharacter
-
-		return result
+		result = [ self.encodeCharacter(c) for c in s.upper() ]
+		return ''.join(result)
