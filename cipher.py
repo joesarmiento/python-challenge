@@ -3,7 +3,6 @@ class Cipher(object):
 		self.cipherValue = cipherValue
 
 	def encodeCharacter(self, c):
-			
 			alphabetPosition  = ord(c) - 64
 			if 1 <= alphabetPosition <= 26: 
 				cipherPosition = 64 + ( ( alphabetPosition + self.cipherValue ) % 26 )
@@ -12,7 +11,6 @@ class Cipher(object):
 				return c 
 
 	def encode(self, s):
-
 		result = ''
 		for c in s.upper():
 			shiftedCharacter = self.encodeCharacter(c)
