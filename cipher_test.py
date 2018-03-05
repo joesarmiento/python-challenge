@@ -42,7 +42,7 @@ class CipherTests(unittest.TestCase):
         self.assertEqual('G', result)
 
     def test_Y_maps_to_B_when_cipher_is_3(self):
-	cipher = Cipher(3)
+        cipher = Cipher(3)
         result = cipher.encode('Y')
         self.assertEqual('B', result)
 
